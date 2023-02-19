@@ -1,5 +1,7 @@
 version: "2.2"
 
+# Flink "Session Mode"  Deployment configuration
+
 
 #volumes:
 #  flink-vol:
@@ -15,7 +17,7 @@ services:
         FLINK_PROPERTIES=
         jobmanager.rpc.address: jobmanager        
     volumes:
-      - ./flink-data:/opt/flink/flink-vol
+      - ./flink-data:/opt/flink/flink-data
 
 
   taskmanager:
@@ -31,4 +33,4 @@ services:
         taskmanager.numberOfTaskSlots: 2
             volumes:
     volumes:
-      - ./flink-data:/opt/flink/flink-vol
+      - ./flink-data:/opt/flink/flink-data
